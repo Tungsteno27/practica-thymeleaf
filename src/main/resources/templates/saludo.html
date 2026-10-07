@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>saludo dinamico</title>
+</head>
+<body>
+  <h1 th:text="${saludo}" th:style="${claseCSS}">texto de prueba</h1>
+  <h3>Objetos implicitos y utilidades</h3>
+  <ul>
+    <li>
+      <strong>1. Sesion</strong>
+      <span th:text="${session.rol}"></span>
+    </li>
+    <li>
+      <strong>1. parametros</strong>
+      <span th:text="${param.nombre != null ? param.nombre : 'Ninguno'}"></span>
+    </li>
+    <li>
+      <strong>1. utilidades</strong>
+      Fecha Actual Formateada: <span th:text="${#dates.format(#dates.createNow(), 'dd/MM/yyyy')}"></span>
+    </li>
+  </ul>
+</body>
+</html>
