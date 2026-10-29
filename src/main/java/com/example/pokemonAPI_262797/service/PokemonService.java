@@ -9,9 +9,9 @@ import java.util.List;
 
 @Service
 public class PokemonService {
+
     @Autowired
     private PokemonRepository pokemonRepository;
-
     public List<Pokemon> obtenerTodos (){
         return pokemonRepository.findAll();
     }
